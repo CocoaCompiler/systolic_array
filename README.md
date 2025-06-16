@@ -1,4 +1,4 @@
-# 4x4 Systolic Array on Basys3 FPGA Board
+# 4x4 Systolic Array on FPGA
 ## Overview
 This project implements a 4x4 systolic array for machine learning inference on a Basys3 FPGA Board. It performs matrix multiplication between 8-bit weights and activations, downscales results to 8-bits, and then applies ReLU activation. The output is written back to feature memory for reuse. 
 
