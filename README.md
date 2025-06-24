@@ -157,7 +157,7 @@ Photos of the board displaying select outputs are shown below. After the 16th el
   
 ## Acknowledgement
 
-This project was a course assignment and is shared with permission from the course instructor.
+This project was a course assignment and is shared with permission from the instructor.
 
 
 
