@@ -4,6 +4,9 @@ This project implements a 4x4 systolic array for machine learning inference on a
 
 Results are displayed on the Basys3 board. Each element of the 4x4 output matrix is shown using 8 LEDs, and the user can toggle a switch to cycle through and view each output element sequentially. The array uses pipelined MAC units, with a total latency of 16 clock cycles per matrix multiplication. 
 
+[Demo Video](https://youtu.be/q6n5RfTxQ9Q)
+> The video demonstrates output for the matrix multiplication example shown in the **Board Output** section below. Many of the values are zero due to the ReLU activation. (The board was glitching when laid flat — likely due to the USB connection — so I filmed while holding it up. That's why the camera angle's a bit weird.)
+
 ## System Architecture
 The system consists of the following modules:
 * **systolicarray4x4**: Computes the raw matrix multiplication result (18-bit outputs).
@@ -120,9 +123,10 @@ Controls data loading, computation, write back, and display.
 
 ![image](https://github.com/user-attachments/assets/74d97407-2f88-41b1-9bf3-71da90049666)
 
-**Debounce logic (note - number of clock cycles may need to be tuned)**
+**Debounce logic**
 
 ![image](https://github.com/user-attachments/assets/499f5a6a-9407-40c9-9aa0-0c223e26de40)
+> Note: Here I used 50 clock cycles for debounce but this number typically needs to be much higher (e.g. 250,000 cycles or 25ms at a 10MHz clock). 50 happened to work at the time the assignment was due, so I just left it unchanged. 
 
 ## Constraints (XDC)
 
@@ -135,6 +139,8 @@ Controls data loading, computation, write back, and display.
 ![image](https://github.com/user-attachments/assets/99875ee4-cb7f-4498-9b2d-bde35d00d717)
 
 ## Board Output
+
+[Demo Video](https://youtu.be/q6n5RfTxQ9Q)
 
 The matrix multiplication being tested on the board uses the following input matrices: 
 
