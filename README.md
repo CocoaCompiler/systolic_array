@@ -22,6 +22,18 @@ The system consists of the following modules:
 * Computation results begin appearing at cycle 10 and continue until cycle 16.
 * Final results are written into feature memory and displayed via LED.
 
+## Implementation Metrics (Vivado 2024.2)
+
+### Timing Summary
+
+<img width="913" height="231" alt="image" src="https://github.com/user-attachments/assets/b9da1a2e-7303-4f3d-8ac2-f61f922824c3" />
+
+### Utilization Summary
+ 
+<img width="855" height="145" alt="image" src="https://github.com/user-attachments/assets/35dddde7-174c-4655-ac0e-c199a5bcba9d" />
+
+
+
 ## Board Output
 
 The matrix multiplication being tested on the board uses the following input matrices: 
@@ -31,9 +43,6 @@ The matrix multiplication being tested on the board uses the following input mat
 These 4x4 weight and feature matrices are preloaded into internal memories within the memoryloader module on reset. The table below shows the expected outputs. Each 8-bit output is shown on the LEDs and switch V17 is used to toggle through outputs.
 
 ![image](https://github.com/user-attachments/assets/fbb819d3-de53-40ac-a088-434c10f975da)
-
-[Demo Video](https://youtu.be/q6n5RfTxQ9Q)
-> The video demonstrates output for the matrix multiplication example shown in the **Board Output** section below. Many of the values are zero due to the ReLU activation.
 
 Photos of the board displaying select outputs are shown below. After the 16th element is displayed, toggling the switch will display the first element again. 
 
